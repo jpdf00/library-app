@@ -7,19 +7,15 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
-Book.prototype.info = function () {
-  return `${title} by ${author}, ${pages} pages, ${read}`;
-};
-
 function addBookToLibrary(title, author, pages, read) {
   const book = new Book(title, author, pages, read);
   myLibrary.push(book);
 }
 
 function displayBooks(library) {
-  table = document.getElementById('contentTable');
+  const table = document.getElementById('contentTable');
   table.innerHTML = null;
-  for (let i = 0; i < library.length; i++) {
+  for (let i = 0; i < library.length; i += 1) {
     const book = library[i];
     let status;
     if (book.read) {
@@ -78,10 +74,10 @@ function changeRead(index) {
 const btn = document.querySelector('#addBooks');
 
 btn.addEventListener('click', () => {
-  let title = document.getElementById('inputTitle').value;
-  let author = document.getElementById('inputAuthor').value;
-  let pages = document.getElementById('inputPages').value;
-  let read = document.getElementById('checkRead').checked;
+  const title = document.getElementById('inputTitle').value;
+  const author = document.getElementById('inputAuthor').value;
+  const pages = document.getElementById('inputPages').value;
+  const read = document.getElementById('checkRead').checked;
   addBookToLibrary(title, author, pages, read);
   displayBooks(myLibrary);
 });
