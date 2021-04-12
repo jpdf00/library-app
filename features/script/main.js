@@ -40,11 +40,15 @@ function displayBooks(library) {
     rmButton.setAttribute('class', 'btn btn-danger btn-sm');
     rmButton.textContent='Delete';
 
+    let reButton=document.createElement('button')
+    reButton.setAttribute('onClick', 'changeRead("'+i+'")');
+    reButton.setAttribute('class', 'btn btn-primary btn-sm');
+    reButton.innerHTML = status;
 
     author.innerHTML=book.author
     title.innerHTML=book.title
     pages.innerHTML=book.pages
-    read.innerHTML=status
+    read.appendChild(reButton);
     opt.appendChild(rmButton);
 
     row.appendChild(title);
@@ -60,6 +64,15 @@ function displayBooks(library) {
 
 function deleteItem(index){
   myLibrary.splice(index,1);
+  displayBooks(myLibrary);
+}
+
+function changeRead(index){
+  if (myLibrary[index].read) {
+    myLibrary[index].read = false;
+  } else {
+    myLibrary[index].read = true;
+  }
   displayBooks(myLibrary);
 }
 
