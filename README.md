@@ -1,23 +1,24 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Library App
 
-> One paragraph statement about the project.
+> Small Library app for recording a collection of books.
 
 ![screenshot](./features/img/app_screenshot.png)
 
-Additional description about the project and its features.
+ - Has a form to add a book.
+ - Shows books saved.
+ - Has a button to remove a book.
+ - Has a button to change the read status.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Html, CSS, and JavaScript
+- Bootstrap
 
 ## Live Demo
 
 [Live Demo Link](https://livedemo.com)
-
 
 ## Getting Started
 
@@ -73,4 +74,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](lic.url) licensed.
+This project is [MIT](./LICENSE) licensed.

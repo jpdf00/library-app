@@ -57,6 +57,7 @@ function displayBooks(library) {
   }
 }
 
+/* eslint-disable */
 function deleteItem(index) {
   myLibrary.splice(index, 1);
   displayBooks(myLibrary);
@@ -70,6 +71,7 @@ function changeRead(index) {
   }
   displayBooks(myLibrary);
 }
+/* eslint-enable */
 
 const btn = document.querySelector('#addBooks');
 
