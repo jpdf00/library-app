@@ -33,20 +33,34 @@ function displayBooks(library) {
     let author=document.createElement('td');
     let pages=document.createElement('td');
     let read=document.createElement('td');
+    let opt=document.createElement('td')
+
+    let rmButton=document.createElement('button')
+    rmButton.setAttribute('onClick', 'deleteItem("'+i+'")');
+    rmButton.setAttribute('class', 'btn btn-danger btn-sm');
+    rmButton.textContent='Delete';
+
 
     author.innerHTML=book.author
     title.innerHTML=book.title
     pages.innerHTML=book.pages
     read.innerHTML=status
+    opt.appendChild(rmButton);
 
     row.appendChild(title);
     row.appendChild(author);
     row.appendChild(pages);
     row.appendChild(read);
+    row.appendChild(opt);
 
     table.appendChild(row);
 
   }
+}
+
+function deleteItem(index){
+  myLibrary.splice(index,1);
+  displayBooks(myLibrary);
 }
 
 const btn = document.querySelector('#addBooks');
