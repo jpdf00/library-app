@@ -7,8 +7,6 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
-
-
 Book.prototype.info = function() {
   return title + " by " + author + ", " + pages + " pages, " + read;
 }
@@ -20,9 +18,10 @@ function addBookToLibrary(title, author, pages, read) {
 
 function displayBooks(library) {
   table = document.getElementById('contentTable');
+  table.innerHTML = null;
   for (let i = 0; i < library.length; i++) {
     let book = library[i];
-    let status
+    let status;
     if(book.read){
       status="Yes";
     }else{
@@ -37,7 +36,7 @@ function displayBooks(library) {
 
     author.innerHTML=book.author
     title.innerHTML=book.title
-    pages.innerHTML=book.title
+    pages.innerHTML=book.pages
     read.innerHTML=status
 
     row.appendChild(title);
@@ -49,3 +48,14 @@ function displayBooks(library) {
 
   }
 }
+
+const btn = document.querySelector('#addBooks');
+
+btn.addEventListener('click', () => {
+  title = document.getElementById('inputTitle').value;
+  author = document.getElementById('inputAuthor').value;
+  pages = document.getElementById('inputPages').value;
+  read = document.getElementById('checkRead').checked;
+  addBookToLibrary(title, author, pages, read);
+  displayBooks(myLibrary);
+});
