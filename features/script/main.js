@@ -1,4 +1,4 @@
-let myLibrary = [];
+const myLibrary = [];
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -7,9 +7,9 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
-Book.prototype.info = function() {
-  return title + " by " + author + ", " + pages + " pages, " + read;
-}
+Book.prototype.info = function () {
+  return `${title} by ${author}, ${pages} pages, ${read}`;
+};
 
 function addBookToLibrary(title, author, pages, read) {
   const book = new Book(title, author, pages, read);
@@ -20,34 +20,34 @@ function displayBooks(library) {
   table = document.getElementById('contentTable');
   table.innerHTML = null;
   for (let i = 0; i < library.length; i++) {
-    let book = library[i];
+    const book = library[i];
     let status;
-    if(book.read){
-      status="Yes";
-    }else{
-      status="No";
+    if (book.read) {
+      status = 'Yes';
+    } else {
+      status = 'No';
     }
 
-    let row=document.createElement('tr');
-    let title=document.createElement('td');
-    let author=document.createElement('td');
-    let pages=document.createElement('td');
-    let read=document.createElement('td');
-    let opt=document.createElement('td')
+    const row = document.createElement('tr');
+    const title = document.createElement('td');
+    const author = document.createElement('td');
+    const pages = document.createElement('td');
+    const read = document.createElement('td');
+    const opt = document.createElement('td');
 
-    let rmButton=document.createElement('button')
-    rmButton.setAttribute('onClick', 'deleteItem("'+i+'")');
+    const rmButton = document.createElement('button');
+    rmButton.setAttribute('onClick', `deleteItem("${i}")`);
     rmButton.setAttribute('class', 'btn btn-danger btn-sm');
-    rmButton.textContent='Delete';
+    rmButton.textContent = 'Delete';
 
-    let reButton=document.createElement('button')
-    reButton.setAttribute('onClick', 'changeRead("'+i+'")');
+    const reButton = document.createElement('button');
+    reButton.setAttribute('onClick', `changeRead("${i}")`);
     reButton.setAttribute('class', 'btn btn-primary btn-sm');
     reButton.innerHTML = status;
 
-    author.innerHTML=book.author
-    title.innerHTML=book.title
-    pages.innerHTML=book.pages
+    author.innerHTML = book.author;
+    title.innerHTML = book.title;
+    pages.innerHTML = book.pages;
     read.appendChild(reButton);
     opt.appendChild(rmButton);
 
@@ -58,16 +58,15 @@ function displayBooks(library) {
     row.appendChild(opt);
 
     table.appendChild(row);
-
   }
 }
 
-function deleteItem(index){
-  myLibrary.splice(index,1);
+function deleteItem(index) {
+  myLibrary.splice(index, 1);
   displayBooks(myLibrary);
 }
 
-function changeRead(index){
+function changeRead(index) {
   if (myLibrary[index].read) {
     myLibrary[index].read = false;
   } else {
@@ -79,10 +78,10 @@ function changeRead(index){
 const btn = document.querySelector('#addBooks');
 
 btn.addEventListener('click', () => {
-  title = document.getElementById('inputTitle').value;
-  author = document.getElementById('inputAuthor').value;
-  pages = document.getElementById('inputPages').value;
-  read = document.getElementById('checkRead').checked;
+  let title = document.getElementById('inputTitle').value;
+  let author = document.getElementById('inputAuthor').value;
+  let pages = document.getElementById('inputPages').value;
+  let read = document.getElementById('checkRead').checked;
   addBookToLibrary(title, author, pages, read);
   displayBooks(myLibrary);
 });
