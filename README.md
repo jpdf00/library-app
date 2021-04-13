@@ -22,23 +22,20 @@
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-### Setup
-
 ### Install
+
+You can download the code to your personal computer clonig the repository using the following command
+
+```
+git clone
+```
 
 ### Usage
 
-### Run tests
-
-### Deployment
+To run this project you only need to open the index.html file in a web browser
 
 
 
@@ -65,11 +62,7 @@ Feel free to check the [issues page](https://github.com/jpdf00/library-app/issue
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
