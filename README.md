@@ -18,7 +18,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://jpdf00.github.io/library-app/)
 
 ## Getting Started
 
@@ -50,17 +50,17 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
 
-👤 **Author2**
+👤 **João Paulo Dias França**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
+- GitHub: [@jpdf00](https://github.com/jpdf00)
+- Twitter: [@jpdf00](https://twitter.com/jpdf00)
+- LinkedIn: [João Paulo Dias França](https://www.linkedin.com/in/jpdf00/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/jpdf00/library-app/issues).
 
 ## Show your support
 
