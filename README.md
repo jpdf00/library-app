@@ -44,12 +44,11 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **Adrian Flores Pizarro**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
-
+- Github: [@AdfPizarro](https://github.com/AdfPizarro)
+- Twitter: [@AdfPizarro](https://twitter.com/adfpizarro)
+- Linkedin: [adrian-flores-pizarro-73b62316a](https://www.linkedin.com/in/adrian-flores-pizarro-73b62316a/)
 👤 **João Paulo Dias França**
 
 - GitHub: [@jpdf00](https://github.com/jpdf00)
