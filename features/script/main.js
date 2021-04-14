@@ -56,7 +56,6 @@ function displayBooks(library) {
     table.appendChild(row);
   }
 }
-
 /* eslint-disable */
 function deleteItem(index) {
   myLibrary.splice(index, 1);
