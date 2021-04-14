@@ -1,10 +1,7 @@
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+const Book = (title, author, pages, read) => {
+  return {title, author, pages,read}
 }
 
 function addBookToLibrary(title, author, pages, read) {
@@ -56,7 +53,6 @@ function displayBooks(library) {
     table.appendChild(row);
   }
 }
-
 /* eslint-disable */
 function deleteItem(index) {
   myLibrary.splice(index, 1);
