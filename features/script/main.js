@@ -6,29 +6,16 @@ const Book = (title, author, pages, read) => {
   const getPages = () => pages;
   const getRead = () => read;
   const toggleRead = x => {
-    read = x
-  }
-  return {getTitle, getAuthor, getPages, getRead, toggleRead};
-}
+    read = x;
+  };
+  return {
+    getTitle, getAuthor, getPages, getRead, toggleRead,
+  };
+};
 
 function addBookToLibrary(title, author, pages, read) {
   const book = Book(title, author, pages, read);
   myLibrary.push(book);
-}
-
-function displayBooks(library) {
-  const table = document.getElementById('contentTable');
-  table.innerHTML = null;
-  for (let i = 0; i < library.length; i += 1) {
-    const book = library[i];
-    let status;
-    if (book.getRead()) {
-      status = 'Yes';
-    } else {
-      status = 'No';
-    }
-    drawPage(book, status, i, table)
-  }
 }
 
 function drawPage(book, status, i, table) {
@@ -62,6 +49,21 @@ function drawPage(book, status, i, table) {
   row.appendChild(opt);
 
   table.appendChild(row);
+}
+
+function displayBooks(library) {
+  const table = document.getElementById('contentTable');
+  table.innerHTML = null;
+  for (let i = 0; i < library.length; i += 1) {
+    const book = library[i];
+    let status;
+    if (book.getRead()) {
+      status = 'Yes';
+    } else {
+      status = 'No';
+    }
+    drawPage(book, status, i, table);
+  }
 }
 
 /* eslint-disable */
