@@ -1,7 +1,32 @@
 const myLibrary = [];
 
-const Book = (title, author, pages, read) => {
-  return {title, author, pages,read}
+class Book {
+  constructor (title, author, pages, read){
+    this.title=title;
+    this.author=author;
+    this.pages=pages;
+    this.read=read;
+  }
+
+  getTitle(){
+    return this.title;
+  }
+  getAuthor(){
+    return this.author;
+  }
+  getPages(){
+    return this.pages;
+  }
+  getRead(){
+    return this.read;
+  }
+  toggleRead(){
+    if (this.read){
+      this.read=false;
+    }else {
+      this.read=true;
+    }
+  }
 }
 
 function addBookToLibrary(title, author, pages, read) {
@@ -38,9 +63,9 @@ function displayBooks(library) {
     reButton.setAttribute('class', 'btn btn-primary btn-sm');
     reButton.innerHTML = status;
 
-    author.innerHTML = book.author;
-    title.innerHTML = book.title;
-    pages.innerHTML = book.pages;
+    author.innerHTML = book.getAuthor();
+    title.innerHTML = book.getTitle();
+    pages.innerHTML = book.getPages();
     read.appendChild(reButton);
     opt.appendChild(rmButton);
 
@@ -60,11 +85,7 @@ function deleteItem(index) {
 }
 
 function changeRead(index) {
-  if (myLibrary[index].read) {
-    myLibrary[index].read = false;
-  } else {
-    myLibrary[index].read = true;
-  }
+  myLibrary[index].toggleRead();
   displayBooks(myLibrary);
 }
 /* eslint-enable */
